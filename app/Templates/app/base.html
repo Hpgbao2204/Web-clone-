@@ -18,7 +18,11 @@
     <link hred-"{%static 'app/css/style.css' %}" rel='stylesheet' /> <link
     hred-"{%static 'app/css/owl.carousel.min.css' %}" rel='stylesheet' /> <link
     hred-"{%static 'app/css/all.min.css' %}" rel='stylesheet' />
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app/css/main.css' %}"
+    />
     <!--join js-->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -149,8 +153,7 @@
     </nav>
     <script src="" async defer></script>
     <!--Main body-->
-    {% block main_content %}{% endblock main_content %} {% block banner_slide
-    %}{% endblock banner_slide %}
+    {% block main_content %}{% endblock main_content %} {% block banner_slide%}{% endblock banner_slide %}
     <!--Footer-->
     <footer
       class="container--fluid bg-success text-center fixed-bottom p-2 mt-5"
