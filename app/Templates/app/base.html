@@ -52,7 +52,7 @@
     <!--Đây là header-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{% url 'home' %}">
           <img
             src="{% static 'app/images/Neel.png' %}"
             width="50"
@@ -73,7 +73,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}"
                 >Trang chủ</a
               >
             </li>
@@ -130,8 +130,8 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Trang cá nhân</a></li>
-              <li><a class="dropdown-item" href="#">Giỏ hàng</a></li>
-              <li><a class="dropdown-item" href="#">Tài Khoản</a></li>
+              <li><a class="dropdown-item" href="{% url 'cart' %}">Giỏ hàng</a></li>
+              <li><a class="dropdown-item" href="#">Thoát</a></li>
               <li><hr class="dropdown-divider" /></li>
               <li>
                 <a class="dropdown-item" href="#">Log out</a>
@@ -140,7 +140,7 @@
           </li>
           <li></li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Giỏ hàng</a>
+            <a class="nav-link" href="{% url 'cart' %}">Giỏ hàng</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Đăng nhập</a>
@@ -153,10 +153,11 @@
     </nav>
     <script src="" async defer></script>
     <!--Main body-->
-    {% block banner_slide %}{% endblock banner_slide %}
-    {% block main_content %}{% endblock main_content %}
+    {% block banner_slide %}{% endblock banner_slide %} 
+    {% block main_content%}{% endblock main_content %} 
     {% block cart_content %}{% endblock cart_content %} 
-    
+    {% block content_checkout %}{% endblock content_checkout %}
+
     <!--Footer-->
     <footer
       class="container--fluid bg-success text-center fixed-bottom p-2 mt-5"
